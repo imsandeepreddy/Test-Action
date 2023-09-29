@@ -11,11 +11,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/imsandeepreddy/yaml-read:latest
-
+    
     steps:
     - uses: actions/checkout@v3
     - name: Log the node version
       run: |
-        python yaml-read.py
+        docker run ghcr.io/imsandeepreddy/yaml-read:latest
